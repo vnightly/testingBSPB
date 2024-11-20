@@ -16,7 +16,7 @@ public class CreditCashPage extends BasePage{
         driver.get("https://www.bspb.ru/retail/consumer-loan/cash");
     }
 
-    public LoginPage clickOformlenieCredita(){
+    public LoginPage goToLoginPage(){
         WebElement oformitCredit = wait.until(ExpectedConditions.visibilityOfElementLocated(OFORMLENIE_CREDITA));
         wait.until(ExpectedConditions.elementToBeClickable(oformitCredit));
         actions.moveToElement(oformitCredit).click().perform();

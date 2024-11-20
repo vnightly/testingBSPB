@@ -42,19 +42,16 @@ public class SmokeTests {
         MainPage mainPage = new MainPage(driver);
         mainPage.open();
         mainPage.goToCredits();
-        CreditCashPage creditCashPage = mainPage.clickCashCredit();
-        creditCashPage.clickOformlenieCredita();
-        SoftAssertions softly = new SoftAssertions();
-        isElementDisplayed(LoginPage.INPUT_USERNAME, "проверка отображения поля ввода для логина", softly);
-        isElementDisplayed(LoginPage.INPUT_PASSWORD, "проверка отображения поля ввода для пароля", softly);
-        isElementDisplayed(LoginPage.BUTTON_LOGIN, "проверка отображения кнопки входа", softly);
-        softly.assertAll();
+        CreditCashPage creditCashPage = mainPage.goToCashCredit();
+        LoginPage loginPage = creditCashPage.goToLoginPage();
+        loginPage.isMainElementsDisplayed();
+        //TODO (идея)можно добавить промежуточную базовую страницу, которая позволяет пользоваться меню главной страницы
+
     }
 
-    private void isElementDisplayed(By by, String check, SoftAssertions softly) {
-        WebElement loginButton = driver.findElement(by);
-        softly.assertThat(loginButton.isDisplayed()).as(check).isTrue();
-    }
+
+
+
 
     @Test
     public void familyIpotekaTest() {

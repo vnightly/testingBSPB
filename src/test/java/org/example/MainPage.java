@@ -23,7 +23,7 @@ public class MainPage extends BasePage {
         actions.moveToElement(creditMenu).perform();
     }
 
-    public CreditCashPage clickCashCredit() {
+    public CreditCashPage goToCashCredit() {
         WebElement creditCash = driver.findElement(CREDIT_CASH);
         actions.moveToElement(creditCash).click().perform();
         return new CreditCashPage(driver);
