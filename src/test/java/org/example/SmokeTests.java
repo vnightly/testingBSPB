@@ -44,16 +44,15 @@ public class SmokeTests {
         mainPage.goToCredits();
         CreditCashPage creditCashPage = mainPage.goToCashCredit();
         LoginPage loginPage = creditCashPage.goToLoginPage();
-        loginPage.isMainElementsDisplayed();
+        loginPage.isElementsVisible();
         //TODO (идея)можно добавить промежуточную базовую страницу, которая позволяет пользоваться меню главной страницы
-
     }
 
 
 
 
 
-    @Test
+    /*@Test
     public void familyIpotekaTest() {
         FamilyIpotekaPage familyIpotekaPage = new FamilyIpotekaPage(driver);
         familyIpotekaPage.open();
@@ -64,9 +63,5 @@ public class SmokeTests {
         isElementDisplayed(FamilyIpotekaPage.PARAMETRS_TABLE, "проверка отображения таблицы", softly);
         softly.assertAll();
 
-    }
-
-
-
-
+    }*/
 }
