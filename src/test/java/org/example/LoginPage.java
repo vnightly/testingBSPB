@@ -11,12 +11,10 @@ public class LoginPage extends BasePage {
     public static final By BUTTON_LOGIN = By.cssSelector("div[class='login-button-home'] button");
     SoftAssertions softly = new SoftAssertions();
     public void open() {
-        //driver.manage().window().maximize();
         driver.get("https://i.bspb.ru/auth?response_type=code&client_id=1&redirect_uri=https%3A%2F%2Fi.bspb.ru%2Flogin%2" +
                 "Fsuccess&prefetch_uri=https%3A%2F%2Fi.bspb.ru%2Flogin%2Fprefetch&force_new_session=true&state=%2Floanap" +
                 "plications%2Fpersonal");
     }
-    //TODO добавить рефлексию и подумать как добавить этот метод в BasePage
     public void isMainElementsDisplayed() {
         isElementDisplayedSoftlyCheck(INPUT_USERNAME, "ввода для логина");
         isElementDisplayedSoftlyCheck(INPUT_PASSWORD, "ввода для пароля");

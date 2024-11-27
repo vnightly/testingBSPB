@@ -44,11 +44,4 @@ public class BasePage {
                 .isTrue();
     }
 
-/*    public void isMainElementsDisplayed() {
-        isElementDisplayedSoftlyCheck(INPUT_USERNAME, "ввода для логина");
-        isElementDisplayedSoftlyCheck(INPUT_PASSWORD, "ввода для пароля");
-        isElementDisplayedSoftlyCheck(BUTTON_LOGIN, "кнопки входа");
-        softly.assertAll();
-    }*/
-
 }

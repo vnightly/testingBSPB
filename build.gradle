@@ -1,23 +1,23 @@
 plugins {
-    id 'java' // Плагин для Java
+    id 'java'
 }
 
-group = 'org.example' // Группа из Maven
-version = '1.0-SNAPSHOT' // Версия из Maven
+group = 'org.example'
+version = '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral() // Используем центральный Maven-репозиторий
+    mavenCentral()
 }
 
 dependencies {
-    // Зависимости из Maven
-    testImplementation 'org.assertj:assertj-core:3.26.3' // Test scope
+    testImplementation 'org.assertj:assertj-core:3.26.3'
     implementation 'org.seleniumhq.selenium:selenium-java:4.26.0'
-    testImplementation 'junit:junit:4.13.1' // Test scope
+    testImplementation 'junit:junit:4.13.1'
+    implementation(gradleApi())
 }
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(11) // Версия Java из Maven
+        languageVersion = JavaLanguageVersion.of(11)
     }
 }

@@ -10,8 +10,6 @@ public class DriverFactory {
         capabilities.setCapability("browserName", "chrome");
         capabilities.setCapability("version", "latest");
         capabilities.setCapability("acceptInsecureCerts", true);
-        //TODO добавить строчку про отлюкчение зумов в браузере
-
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized"); // Устанавливаем разрешение
         options.addArguments("--disable-notifications"); // Отключаем уведомления
