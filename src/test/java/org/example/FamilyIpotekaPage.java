@@ -22,7 +22,4 @@ public class FamilyIpotekaPage extends BasePage{
         WebElement parameters = driver.findElement(PARAMETERS_BUTTON);
         actions.moveToElement(parameters).click().perform();
     }
-
-
-
 }

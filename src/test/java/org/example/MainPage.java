@@ -14,7 +14,6 @@ public class MainPage extends BasePage {
     }
 
     public void open(){
-       // driver.manage().window().maximize();
         driver.get("https://www.bspb.ru/");
     }
 

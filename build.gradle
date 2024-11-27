@@ -21,3 +21,6 @@ java {
         languageVersion = JavaLanguageVersion.of(11)
     }
 }
+wrapper {
+    gradleVersion("8,2")
+}
